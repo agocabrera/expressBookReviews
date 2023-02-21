@@ -26,7 +26,7 @@ public_users.post("/register", (req, res) => {
 });
 
 // Get the book list available in the shop
-public_users.get('/', async function (req, res) {
+public_users.get('/', function (req, res) {
     const getBooks = new Promise(function (resolve, reject) {
         res.status(200).json(books);
         return resolve("Task 10 OK.");

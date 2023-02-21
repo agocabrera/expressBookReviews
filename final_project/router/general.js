@@ -46,8 +46,7 @@ public_users.get('/author/:author', function (req, res) {
       return;
     }
   }
-  res.send("No books by this author found.");
-  return;
+  return res.status(404).json({ message: "No books by this author found." });
 });
 
 // Get all books based on title

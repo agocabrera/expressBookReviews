@@ -8,10 +8,6 @@ let users = [
   { username: "Joe", password: "123" }
 ];
 
-const isValid = (username) => { //returns boolean
-  //write code to check if the username is valid
-}
-
 // Check if username and password match the one we have in records
 const authenticatedUser = (username, password) => {
   let validusers = users.filter(user => user.username === username && user.password === password);
@@ -69,5 +65,4 @@ regd_users.delete("/auth/review/:isbn", (req, res) => {
 });
 
 module.exports.authenticated = regd_users;
-module.exports.isValid = isValid;
 module.exports.users = users;
